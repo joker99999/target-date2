@@ -1,0 +1,10 @@
+.newtop
+  .newtoptext
+    〜グループ作成〜
+  .toplink
+    = link_to messages_index_path, class: 'toplinktext' do
+      トップページへ
+.newmain
+  .box
+    = form_with model: @group do |f| 
+      f

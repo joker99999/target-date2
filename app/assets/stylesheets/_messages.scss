@@ -1,0 +1,112 @@
+.wrapper {
+  width: 100vw;
+}
+.top {
+  width: 100%;
+  height: 150px;
+  background-color: lightgrey;
+  .topcontent {
+    font-size: 50px;
+    font-weight: 800;
+    margin-left: 550px;
+    padding-top: 40px;
+  }
+  .topleft {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    top: -98px;
+    left: 40px;
+    .share {
+      color: black;
+      text-decoration: none;
+    }
+    .question {
+      color: black;
+      text-decoration: none;
+    }
+    .target {
+      color: black;
+      text-decoration: none;
+    }
+    .newgroup {
+      color: black;
+      text-decoration: none;
+    }
+    .condition {
+      position: relative;
+      left: 200px;
+      top: -120px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+.maincontent {
+  display: flex;
+  .leftcontent {
+    width: 30%;
+    height: 100vh;
+    background-color: darkgray;
+    .leftcontent-top {
+      font-size: 25px;
+      font-weight: 600;
+      position: relative;
+      left: 20px;
+    }
+  }
+  .rightcontent {
+    width: 70%;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+}
+.toptext {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+.box {
+  .target-box {
+    width: 1000px;
+    height: 400px;
+    position: relative;
+    left: 210px;
+  }
+  .sendbtn {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    color: #ffffff;
+  }
+}
+.topuser {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 1050px;
+  .profilebtn {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 200px;
+    position: relative;
+    top: -200px;
+  }
+  .logoutbtn {
+    text-decoration: none;
+    color: black;
+  }
+  .signupbtn {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: -120px;
+    left: 105px;
+  }
+  .loginbtn {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: -90px;
+    right: 40px;
+  }
+}

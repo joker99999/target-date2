@@ -1,0 +1,31 @@
+.newtop {
+  width: 100vw;
+  height: 150px;
+  background-color: lightgray;
+  text-align: center;
+  .newtoptext {
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 43px;
+  }
+  .toplink {
+    .toplinktext {
+      font-size: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      color: black;
+      position: relative;
+      top: -100px;
+      left: -630px;
+    }
+  }
+}
+.newmain {
+  .box {
+    width: 80%;
+    height: 500px;
+    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
