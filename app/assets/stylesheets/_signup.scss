@@ -1,148 +1,50 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-
-body, html {
-  height: 100%;
-}
-body {
-  font-family: 'Open Sans';
-  font-weight: 100;
-  display: flex;
-  overflow: hidden;
-}
-.toptext {
-  font-size: 60px;
-  color: #ffffff;
-  position: relative;
-  left: 700px;
-  top: 100px;
-}
-input {
-  ::-webkit-input-placeholder {
-     color: rgba(255,255,255,0.7);
-  }
-  ::-moz-placeholder {
-     color: rgba(255,255,255,0.7);  
-  }
-  :-ms-input-placeholder {  
-     color: rgba(255,255,255,0.7);  
-  }
-  &:focus {
-    outline: 0 transparent solid;
-    ::-webkit-input-placeholder {
-     color: rgba(0,0,0,0.7);
-    }
-    ::-moz-placeholder {
-       color: rgba(0,0,0,0.7);  
-    }
-    :-ms-input-placeholder {  
-       color: rgba(0,0,0,0.7);  
-    }
-  }
-}
-
-.login-form {
-  //background: #222;
-  //box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-  min-height: 10rem;
-  margin: auto;
-  max-width: 50%;
-  padding: .5rem;
-}
-.login-text {
-  //background: hsl(40,30,60);
-  //border-bottom: .5rem solid white;
-  color: white;
-  font-size: 1.5rem;
-  margin: 0 auto;
-  max-width: 50%;
-  padding: .5rem;
-  text-align: center;
-  //text-shadow: 1px -1px 0 rgba(0,0,0,0.3);
-  .fa-stack-1x {
-    color: black;
-  }
-}
-
-.login-username, .login-password {
-  background: transparent;
-  border: 0 solid;
-  border-bottom: 1px solid rgba(white, .5);
-  color: white;
-  display: block;
-  margin: 1rem;
-  padding: .5rem;
-  transition: 250ms background ease-in;
-  width: calc(100% - 3rem);
-  &:focus {
-    background: white;
-    color: black;
-    transition: 250ms background ease-in;
-  }
-}
-
-.login-forgot-pass {
-  //border-bottom: 1px solid white;
-  bottom: 0;
-  color: white;
-  cursor: pointer;
-  display: block;
-  font-size: 75%;
-  left: 0;
-  opacity: 0.6;
-  padding: .5rem;
-  position: absolute;
-  text-align: center;
-  //text-decoration: none;
-  width: 100%;
-  &:hover {
-    opacity: 1;
-  }
-}
-.login-submit {
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  display: block;
-  margin: 1rem auto;
-  min-width: 1px;
-  padding: .25rem;
-  transition: 250ms background ease-in;
-  &:hover, &:focus {
-    background: white;
-    color: black;
-    transition: 250ms background ease-in;
-  }
-}
-
-
-
-
-[class*=underlay] {
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: fixed;
-  top: 0;
-}
-.underlay-photo {
-  animation: hue-rotate 6s infinite;
+.signup{
+  width: 100vw;
+  height: 100vh;
   background-color: black;
-  // background: url('https://31.media.tumblr.com/41c01e3f366d61793e5a3df70e46b462/tumblr_n4vc8sDHsd1st5lhmo1_1280.jpg');
-  // background-size: cover;
-  -webkit-filter: grayscale(30%);
-  z-index: -1;
-}
-.underlay-black {
-  background: rgba(0,0,0,0.7);
-  z-index: -1;
-}
-
-@keyframes hue-rotate {
-  from {
-    -webkit-filter: grayscale(30%) hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: grayscale(30%) hue-rotate(360deg);
-  }
+    .topsignup-text {
+      font-size: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+    .signup-box {
+      width: 500px;
+      height: 600px;
+      background-color: lightgrey;
+      margin:0 auto;
+      margin-top: 20px;
+      .signup-box-text {
+        margin:0 auto;
+        color: #444;
+        font-size: 1.5em;
+        outline: none; 
+        box-shadow: none; 
+        -webkit-appearance: none; 
+        border-radius: 0;
+        border-top: none;
+        border-left: solid 1px;
+        border-right: solid 1px;
+        border-bottom: solid 1px;
+        border-color: #bbb;
+        background: transparent;
+        display: block;
+        height: 2em;
+        width: 12em;
+        margin-bottom: 5%;
+        padding: 0 3%;
+        position: relative;
+        z-index: 0;
+        -webkit-transition: border .25s; 
+        -moz-transition: border .25s;
+        -o-transition: border .25s;
+        transition: border .25s;
+        .signup-box-text1 {
+          padding-top: 40px;
+        }
+        .signup-btn {
+          padding-top: 20px;
+          margin-left: 80px;
+        }
+      }
+    }
 }
