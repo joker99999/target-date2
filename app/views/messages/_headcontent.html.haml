@@ -1,0 +1,26 @@
+.top
+  .topcontent
+    〜本日の目標〜
+  .topleft
+    %ul
+      %li
+      = link_to shares_path, class: "share" do
+        ・共有
+      %li
+      = link_to 'root', class: "question" do
+        ・質問
+      %li
+      = link_to new_message_path, class: "target" do
+        ・本日の目標投稿
+      %li
+      = link_to new_group_path, class: "newgroup" do
+        ・新規グループ作成
+    = link_to 'root', class: "condition" do
+      ・体調管理報告
+    .topuser
+      - if user_signed_in?
+        = link_to '・プロフィール変更', edit_user_registration_path, class: 'profilebtn'
+        = link_to '・ログアウト', destroy_user_session_path, method: :delete, class: 'logoutbtn'
+      - else
+        = link_to '・サインアップ', new_user_registration_path, class: 'signupbtn'
+        = link_to '・ログイン', new_user_session_path, class: 'loginbtn'

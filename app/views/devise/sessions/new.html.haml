@@ -1,0 +1,14 @@
+.toptext
+  Login
+%form.login-form
+  %p.login-text
+    %span.fa-stack.fa-lg
+      %i.fa.fa-circle.fa-stack-2x
+      %i.fa.fa-lock.fa-stack-1x
+  %input.login-username{:autofocus => "true", :placeholder => "Email", :required => "true", :type => "email"}/
+  %input.login-password{:placeholder => "Password", :required => "true", :type => "password"}/
+  %input.login-submit{:name => "Login", :type => "submit", :value => "Login"}/
+%a.login-forgot-pass{:href => "#"} forgot password?
+.underlay-photo
+.underlay-black
+
