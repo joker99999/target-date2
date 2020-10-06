@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
   end
 
   def index
+    @date = DateTime.now.strftime("%m月%d日")
   end
 
   

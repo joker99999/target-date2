@@ -1,9 +1,11 @@
-.toptext
-  本日の目標投稿
-.box
-  = form_with model: @target do |f|
-    %ul 
-      %li
-        =f.text_field :title, class: 'target-box'
-      %li  
-        =f.submit '投稿する', class: 'sendbtn'
+= render 'headcontent'
+.maincontent
+  = render 'leftcontent'
+  .rightcontent
+    .rightcontent-text
+      = form_with model: @target do |f|
+        %ul 
+          %li
+            =f.text_field :title, class: 'target-box'
+          %li  
+            =f.submit '投稿する', class: 'sendbtn'
