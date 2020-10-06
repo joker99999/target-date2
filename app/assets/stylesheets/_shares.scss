@@ -1,0 +1,44 @@
+.sharelink {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+.share {
+  overflow:auto;
+  width: 1100px;
+  // height: 2000px;
+  .rightcontent {
+    .sharebox {
+      padding-left: 20px;
+      .sharetext {
+        border:1px solid black;
+        font-size: 30px;
+        font-weight: 500;
+      }
+      .sharebox1 {
+        display: flex;
+        .shareuser {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+.box {
+  .box-top {
+    text-align: center;
+    font-size: 30px;
+  }
+  .box-text {
+    .target-box {
+
+    }
+    .sendbtn {
+      position: relative;
+      left: 260px;
+      top: 60px;
+      border-radius:5px;
+    }
+  }
+}

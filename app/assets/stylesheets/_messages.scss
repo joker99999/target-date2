@@ -71,13 +71,14 @@
     width: 600px;
     height: 400px;
     position: relative;
-    left: 210px;
+    left: 60px;
+    top: 30px;
   }
   .sendbtn {
-    height: 100px;
+    height: 70px;
     width: 100px;
-    background-color: red;
-    color: #ffffff;
+    background-color: lightgray;
+    color: black;
   }
   .box-top {
     font-size: 20px;
@@ -99,6 +100,8 @@
   .logoutbtn {
     text-decoration: none;
     color: black;
+    position: relative;
+    top: -200px;
   }
   .signupbtn {
     text-decoration: none;

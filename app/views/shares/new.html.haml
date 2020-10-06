@@ -1,3 +1,4 @@
+= render 'messages/headcontent'
 .maincontent
   .leftcontent
     .leftcontent-top
@@ -9,6 +10,6 @@
       = form_with model: @share do |f|
         %ul 
           %li
-            =f.text_field :share, class: 'target-box'
+            =f.text_area :share, class: 'target-box'
           %li  
             =f.submit '投稿する', class: 'sendbtn'

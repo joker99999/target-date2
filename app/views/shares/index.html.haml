@@ -1,5 +1,21 @@
 = render 'messages/headcontent'
 .maincontent
   = render 'messages/leftcontent'
-  .rightcontent
-    kkk
+  .share
+    = link_to new_share_path, class: "sharelink" do
+      ・新規共有
+    .rightcontent
+      .sharebox
+        - @shares.each do |s|
+          .sharetext
+            共有:
+            =s.share
+          .sharebox1
+            .shareuser
+              %i.fa.fa-user
+              ユーザー名:
+              =s.user.username
+              さん  
+              .shareday
+                投稿した日付:
+                =s.created_at
