@@ -1,0 +1,20 @@
+= render 'messages/headcontent'
+.maincontent
+  = render 'messages/leftcontent'
+  .question
+    = link_to new_question_path, class: "questionlink" do
+      質問を投稿はこちらから←
+    .questioncontent
+      - @questions.each do |q|
+        .questiontext
+          質問内容:
+          =q.title
+        .questionbox1
+          .questionuser
+            %i.fa.fa-user
+            ユーザー名:
+            =q.user.username
+            さん  
+            .questionday
+              投稿した日付:
+              =q.created_at

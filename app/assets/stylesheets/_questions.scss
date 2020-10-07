@@ -1,0 +1,19 @@
+.question-new {
+    text-align: center;
+    font-size: 30px;
+  }
+  .question-new-box {
+    .target-box {
+      width: 600px;
+      height: 400px;
+      position: relative;
+      left: 60px;
+      top: 30px;
+    }
+    .sendbtn {
+      position: relative;
+      left: 260px;
+      top: 60px;
+      border-radius:5px;
+    }
+  }

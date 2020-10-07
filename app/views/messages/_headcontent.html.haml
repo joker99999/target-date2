@@ -6,22 +6,31 @@
     %ul
       %li
       = link_to shares_path, class: "share" do
-        ・共有
+        %i.fa.fa-share-alt
+        共有
       %li
-      = link_to 'root', class: "question" do
-        ・質問
+      = link_to questions_path, class: "question" do
+        %i.fa.fa-question
+        質問
       %li
       = link_to new_message_path, class: "target" do
-        ・本日の目標投稿
+        %i.fa.fa-check-square
+        本日の目標投稿
       %li
       = link_to new_group_path, class: "newgroup" do
-        ・新規グループ作成
+        %i.fa.fa-group
+        新規グループ作成
     = link_to 'root', class: "condition" do
-      ・体調管理報告
+      %i.fa.fa-heartbeat
+      体調管理報告
   .topuser
     - if user_signed_in?
-      = link_to '・プロフィール変更', edit_user_registration_path, class: 'profilebtn'
-      = link_to '・ログアウト', destroy_user_session_path, method: :delete, class: 'logoutbtn'
+      = link_to edit_user_registration_path, class: 'profilebtn' do
+        %i.fa.fa-edit
+        プロフィール変更
+      = link_to destroy_user_session_path, method: :delete, class: 'logoutbtn' do
+        %i.fa.fa-sign-out
+        ログアウト
     - else
       = link_to '・サインアップ', new_user_registration_path, class: 'signupbtn'
       = link_to '・ログイン', new_user_session_path, class: 'loginbtn'
