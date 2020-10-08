@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2020_10_06_061717) do
     t.text "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_targets_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -62,4 +64,5 @@ ActiveRecord::Schema.define(version: 2020_10_06_061717) do
 
   add_foreign_key "questions", "users"
   add_foreign_key "shares", "users"
+  add_foreign_key "targets", "users"
 end

@@ -1,0 +1,18 @@
+= render 'headcontent'
+.maincontent
+  = render 'leftcontent'
+  .rightcontent
+    .sharebox
+      - @targets.each do |t|
+        .targettext
+          目標:
+          =t.title
+        .targetbox1
+          .targetuser
+            %i.fa.fa-user
+            ユーザー名:
+            =t.user.username
+            さん  
+            .targetday
+              投稿した日付:
+              =t.created_at

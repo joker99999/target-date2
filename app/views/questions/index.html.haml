@@ -1,9 +1,10 @@
-= render 'messages/headcontent'
+= render 'targets/headcontent'
 .maincontent
-  = render 'messages/leftcontent'
+  = render 'targets/leftcontent'
   .question
     = link_to new_question_path, class: "questionlink" do
-      質問を投稿はこちらから←
+      質問を投稿はこちらから
+      %i.fa.fa-hand-o-left
     .questioncontent
       - @questions.each do |q|
         .questiontext
