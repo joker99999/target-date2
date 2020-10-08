@@ -2,10 +2,15 @@
 .maincontent
   = render 'leftcontent'
   .rightcontent
+    .targets-top
+      %i.fa.fa-check-square
+      本日の目標
+    = link_to targets_path, class: "target-link" do
+      目標投稿一覧はこちら←
     .rightcontent-text
       = form_with model: @target do |f|
         %ul 
           %li
-            =f.text_field :title, class: 'target-box'
+            =f.text_area :title, class: 'target-box'
           %li  
             =f.submit '投稿する', class: 'sendbtn'

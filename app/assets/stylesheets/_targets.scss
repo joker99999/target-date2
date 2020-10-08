@@ -59,6 +59,44 @@
     width: 70%;
     height: 100vh;
     background-color: #ffffff;
+    .sharebox {
+      .targettext {
+        border:1px solid black;
+        font-size: 30px;
+        font-weight: 500;
+      }
+    }
+    .targets-top {
+      font-size: 30px;
+      padding-left: 200px;
+    }
+    .target-link {
+      text-decoration: none;
+      color: blue;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .rightcontent-text {
+      .target-box {
+        font-size: 30px;
+        width: 600px;
+        height: 400px;
+        position: relative;
+        left: 60px;
+        top: 30px;
+        border-radius:5px;
+      }
+      .sendbtn {
+        height: 70px;
+        width: 100px;
+        background-color: lightgray;
+        color: black;
+        position: relative;
+        top: 60px;
+        left: 270px;
+        border-radius:5px;
+      }
+    }
   }
 }
 .toptext {

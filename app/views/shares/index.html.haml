@@ -1,9 +1,10 @@
-= render 'messages/headcontent'
+= render 'targets/headcontent'
 .maincontent
-  = render 'messages/leftcontent'
+  = render 'targets/leftcontent'
   .share
     = link_to new_share_path, class: "sharelink" do
-      ・新規共有
+      新規共有はこちら
+      %i.fa.fa-hand-o-left
     .rightcontent
       .sharebox
         - @shares.each do |s|
