@@ -1,0 +1,19 @@
+= render 'targets/headcontent'
+.maincontent
+  = render 'targets/leftcontent'
+  .health-index
+    - @healths.each do |h|
+      -# .healthtext
+      -#   質問内容:
+      -#   =q.title
+      .healthbox1
+        .healthuser
+          %i.fa.fa-user
+          ユーザー名:
+          =h.user.username
+          さん
+        .health-question
+          -# =h.health.question1.text  
+          .questionday
+            投稿した日付:
+            =h.created_at

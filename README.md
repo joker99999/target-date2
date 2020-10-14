@@ -93,3 +93,10 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :question
 - belongs_to :share
+
+## healthテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user

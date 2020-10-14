@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: "targets#index"
   # get 'homes/index'
   # get 'homes/show'
@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :groups
   resources :shares
   resources :questions
+  resources :healths
 end
 
