@@ -1,0 +1,35 @@
+= render 'targets/headcontent'
+.maincontent
+  = render 'targets/leftcontent'
+  .new-health-content
+    .health-toptext
+      〜体調管理報告〜
+    -# = @questions1.each do |q|
+    = form_with model: @health do |q|
+      .health-question
+        .question-text
+          1,朝ごはんは食べましたか？
+        .question1
+          =q.collection_select :question1_id, Question1.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+      .health-question
+        .question-text
+          2,何時間睡眠しましたか?
+        .question2
+          =q.collection_select :question2_id, Question2.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+      .health-question
+        .question-text
+          3,適度な運動はしていますか?
+        .question3
+          =q.collection_select :question1_id, Question1.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+      .health-question
+        .question-text
+          4,体調はどうですか?
+        .question4
+          =q.collection_select :question3_id, Question3.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+      .health-question
+        .question-text
+          5,本日のモチベーションはどうですか?
+        .question5
+          =q.collection_select :question4_id, Question4.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+      .health-btn 
+        =q.submit '投稿する', class: 'sendbtn'
