@@ -17,3 +17,26 @@
       border-radius:5px;
     }
   }
+.question-index {
+  padding-left: 20px;
+  padding-top: 10px;
+  .questionlink {
+    color: blue;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .questioncontent {
+    .questiontext {
+      margin-top: 15px;
+      border: 1px solid black;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .questionbox1 {
+      .questionuser {
+        font-size: 19px;
+      }
+    }
+  }
+}

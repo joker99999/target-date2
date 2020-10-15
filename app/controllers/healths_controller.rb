@@ -2,6 +2,7 @@ class HealthsController < ApplicationController
   def new
     @date = DateTime.now.strftime("%m月%d日")
     @health = Health.new
+    @users = User.all
   end
 
   def create
@@ -12,10 +13,11 @@ class HealthsController < ApplicationController
   def index
     @healths = Health.all
     @date = DateTime.now.strftime("%m月%d日")
+    @users = User.all
   end
 
   private
   def health_params
-    params.require(:health).permit(:question1, :question2, :question3, :question4, :question5).merge(user_id: current_user.id)
+    params.require(:health).permit(:question1_id, :question2_id, :question3_id, :question4_id, :question5_id).merge(user_id: current_user.id)
   end
 end

@@ -2,6 +2,7 @@ class SharesController < ApplicationController
   def new
     @share = Share.new
     @date = DateTime.now.strftime("%m月%d日")
+    @users = User.all
   end
 
   def create
@@ -12,6 +13,7 @@ class SharesController < ApplicationController
   def index
     @shares = Share.all
     @date = DateTime.now.strftime("%m月%d日")
+    @users = User.all
   end
 
   private

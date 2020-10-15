@@ -3,4 +3,6 @@ class Question4 < ActiveHash::Base
     {id: 1, text: 'とても高い'}, {id: 2, text: 'やや高い'}, {id: 3, text: 'どちらとも言えない'},
     {id: 4, text: 'やや低い'},{id: 5, text: 'とても低い'},
 ]
+  include ActiveHash::Associations
+  has_many :healths
 end

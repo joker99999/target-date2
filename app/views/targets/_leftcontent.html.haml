@@ -1,6 +1,12 @@
 .leftcontent
   .leftcontent-top
-    グループ名
+    メンバー名:
     .member
-      = link_to users_path do
-        ・masa
+      - @users.each do |u|
+        %ul
+          %li
+          = link_to user_path(u), class: "memberlist" do
+            ・
+            =u.username
+      -# = link_to users_path do
+      -#   ・masa

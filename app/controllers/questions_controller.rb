@@ -2,11 +2,13 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.all
     @date = DateTime.now.strftime("%m月%d日")
+    @users = User.all
   end
 
   def new 
     @question = Question.new
     @date = DateTime.now.strftime("%m月%d日")
+    @users = User.all
   end
 
   def create

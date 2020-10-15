@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get 'homes/show'
   resources :targets
   resources :messages
-  resources :users, only: [:index]
+  resources :users, only: [:index, :show]
   resources :groups
   resources :shares
   resources :questions
