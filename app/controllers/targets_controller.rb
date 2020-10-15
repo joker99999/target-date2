@@ -2,6 +2,7 @@ class TargetsController < ApplicationController
   def new
     @target = Target.new
     @date = DateTime.now.strftime("%m月%d日")
+    @users = User.all
   end
 
   def create
@@ -12,6 +13,7 @@ class TargetsController < ApplicationController
   def index
     @targets = Target.all
     @date = DateTime.now.strftime("%m月%d日")
+    @users = User.all
   end
 
   private

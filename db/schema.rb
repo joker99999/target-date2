@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 2020_10_12_124615) do
   end
 
   create_table "healths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "question1"
-    t.string "question2"
-    t.string "question3"
-    t.string "question4"
-    t.string "question5"
+    t.string "question1_id"
+    t.string "question2_id"
+    t.string "question3_id"
+    t.string "question4_id"
+    t.string "question5_id"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

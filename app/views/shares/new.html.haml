@@ -1,8 +1,6 @@
 = render 'targets/headcontent'
 .maincontent
-  .leftcontent
-    .leftcontent-top
-      グループ名
+  = render 'targets/leftcontent'
   .box
     .box-top
       ー新規共有ページー
@@ -12,4 +10,4 @@
           %li
             =f.text_area :share, class: 'target-box'
           %li  
-            =f.submit '投稿する', class: 'sendbtn'
+            =f.submit '投稿する', class: 'target-sendbtn'

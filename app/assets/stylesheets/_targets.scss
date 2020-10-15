@@ -56,25 +56,30 @@
     }
   }
   .rightcontent {
-    width: 70%;
-    height: 100vh;
     background-color: #ffffff;
     .sharebox {
+      padding-left: 20px;
       .targettext {
         border:1px solid black;
-        font-size: 30px;
+        font-size: 24px;
         font-weight: 500;
+        margin-top: 15px;
+      }
+      .targetbox1 {
+        font-size: 19px;
       }
     }
     .targets-top {
       font-size: 30px;
-      padding-left: 200px;
+      padding-left: 20px;
+      margin-top: 10px;
     }
     .target-link {
       text-decoration: none;
       color: blue;
       font-size: 20px;
       font-weight: 600;
+      padding-left: 20px;
     }
     .rightcontent-text {
       .target-box {
@@ -86,14 +91,14 @@
         top: 30px;
         border-radius:5px;
       }
-      .sendbtn {
-        height: 70px;
+      .target-sendbtn {
+        height: 50px;
         width: 100px;
         background-color: lightgray;
         color: black;
         position: relative;
         top: 60px;
-        left: 270px;
+        left: 500px;
         border-radius:5px;
       }
     }
@@ -155,4 +160,7 @@
     top: -90px;
     right: 40px;
   }
+}
+.memberlist {
+  text-decoration: none;
 }
