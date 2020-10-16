@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   resources :messages
   resources :users, only: [:index, :show]
   resources :groups
-  resources :shares
-  resources :questions
+  resources :shares do
+    resources :comments, only: :create
+  end
+  resources :questions do
+    resources :comments, only: :create
+  end
   resources :healths
 end
 

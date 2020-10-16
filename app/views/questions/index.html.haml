@@ -16,6 +16,9 @@
             ユーザー名:
             =q.user.username
             さん  
-            .questionday
-              投稿した日付:
-              =q.created_at
+          .questionday
+            投稿した日付:
+            =q.created_at
+          .question-comment
+            = link_to 'root' do
+              %i.fas.fa-comment-alt :コメントする

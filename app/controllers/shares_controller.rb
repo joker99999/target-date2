@@ -11,6 +11,8 @@ class SharesController < ApplicationController
   end
 
   def index
+    @sharecomment = Sharecomment.new
+    # @comments = @share.sharecomment.includes(:username)
     @shares = Share.all
     @date = DateTime.now.strftime("%m月%d日")
     @users = User.all
