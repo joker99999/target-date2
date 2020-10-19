@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :targets
   has_many :questions
   has_many :shares
-  has_many :sharecomments
+  has_many :sharecomments 
+
 end

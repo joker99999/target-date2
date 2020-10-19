@@ -4,32 +4,36 @@
   .new-health-content
     .health-toptext
       〜体調管理報告〜
+    .health-toplink 
+      = link_to healths_path, class: "healthlink" do
+        体調管理報告の一覧はこちら
+        %i.fa.fa-hand-o-left
     -# = @questions1.each do |q|
-    = form_with model: @health do |q|
+    = form_with model: @health do |h|
       .health-question
         .question-text
           1,朝ごはんは食べましたか？
         .question1
-          =q.collection_select :question1_id, Question1.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+          =h.collection_select :question1_text, Question1.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
       .health-question
         .question-text
           2,何時間睡眠しましたか?
         .question2
-          =q.collection_select :question2_id, Question2.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+          =h.collection_select :question2_text, Question2.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
       .health-question
         .question-text
           3,適度な運動はしていますか?
         .question3
-          =q.collection_select :question3_id, Question1.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+          =h.collection_select :question3_text, Question1.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
       .health-question
         .question-text
           4,体調はどうですか?
         .question4
-          =q.collection_select :question4_id, Question3.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+          =h.collection_select :question4_text, Question3.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
       .health-question
         .question-text
           5,本日のモチベーションはどうですか?
         .question5
-          =q.collection_select :question5_id, Question4.all, :id, :text, {prompt:"選択してください"}, {class: 'input-text'}
+          =h.collection_select :question5_text, Question4.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
       .health-btn 
-        =q.submit '投稿する', class: 'health-sendbtn'
+        =h.submit '投稿する', class: 'health-sendbtn'
