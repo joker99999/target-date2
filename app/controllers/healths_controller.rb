@@ -18,6 +18,6 @@ class HealthsController < ApplicationController
 
   private
   def health_params
-    params.require(:health).permit(:question1_id, :question2_id, :question3_id, :question4_id, :question5_id).merge(user_id: current_user.id)
+    params.require(:health).permit(:question1_text, :question2_text, :question3_text, :question4_text, :question5_text).merge(user_id: current_user.id)
   end
 end

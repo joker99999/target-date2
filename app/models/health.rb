@@ -1,6 +1,6 @@
 class Health < ApplicationRecord
-  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :question1
   belongs_to_active_hash :question2
   belongs_to_active_hash :question3
