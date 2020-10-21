@@ -2,7 +2,7 @@
 .maincontent
   = render 'targets/leftcontent'
   .userright-content
-    -@users.each do |u|
-      今日の目標
-      =u.target.title
+    今日の目標
+    -@target.each do |t|
+      =t.title
       

@@ -39,23 +39,6 @@ Things you may want to cover:
 - has_many :shares
 - has_many :comments
 
-## groupsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|title|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- has_many :users,  through:  :user_groups
-
-## users_groupsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :group
-
 ## targetテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -82,16 +65,24 @@ Things you may want to cover:
 - belongs_to :user
 - has_many :comments
 
-## commentsテーブル
+## question-commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |question_id|integer|null: false, foreign_key: true|
-|share_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :question
+
+## share-commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|share_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
 - belongs_to :share
 
 ## healthテーブル

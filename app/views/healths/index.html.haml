@@ -7,14 +7,23 @@
       -#   質問内容:
       -#   =q.title
       .healthbox1
+        .health-toptext
+          本日の体調管理報告一覧
         .healthuser
           %i.fa.fa-user
           ユーザー名:
           =h.user.username
           さん
-          =h.question1_text.anser
-        .health-question
-          -# =h.health.question1.text  
-          .questionday
-            投稿した日付:
-            =h.created_at
+        .health-anser
+          1,朝ごはんは食べましたか？
+          %br=h.health.question1.anser
+          2,何時間睡眠しましたか?
+          %br=h.question2_text 
+          3,適度な運動はしていますか?
+          %br=h.question3_text
+          4,体調はどうですか?
+          %br=h.question4_text
+          5,本日のモチベーションはどうですか?
+          %br=h.question5_text
+          投稿した日付:
+          =h.created_at
