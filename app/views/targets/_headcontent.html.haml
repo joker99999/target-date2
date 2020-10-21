@@ -17,12 +17,9 @@
         %i.fa.fa-check-square
         本日の目標投稿
       %li
-      = link_to new_group_path, class: "newgroup" do
-        %i.fa.fa-group
-        新規グループ作成
-    = link_to new_health_path, class: "condition" do
-      %i.fa.fa-heartbeat
-      体調管理報告
+      = link_to new_health_path, class: "condition" do
+        %i.fa.fa-heartbeat
+        体調管理報告
   .topuser
     - if user_signed_in?
       = link_to edit_user_registration_path, class: 'profilebtn' do
