@@ -6,13 +6,10 @@ Rails.application.routes.draw do
   resources :targets
   resources :messages
   resources :users, only: [:index, :show]
-  resources :groups
   resources :shares do
-    resources :comments, only: :create
+    resources :sharecomments, only: [:create]
   end
-  resources :questions do
-    resources :comments, only: :create
-  end
+  resources :questions 
   resources :healths
 end
 

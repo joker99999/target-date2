@@ -1,0 +1,14 @@
+= render 'targets/headcontent'
+.maincontent
+  = render 'targets/leftcontent'
+  .share-show
+    .share-showcontent
+      共有内容：
+      =@share.share
+    .share-comments
+      =form_with model: @sharecomment do |c|
+        %ul 
+          %li
+            =c.text_area :text, class: 'sharecommmet-box'
+          %li  
+            =c.submit '投稿する', class: 'sharecomment-sendbtn'

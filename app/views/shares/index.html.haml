@@ -20,11 +20,11 @@
             投稿した日付:
             =s.created_at
           .share-comment
-            = link_to 'root' do
+            = link_to share_path(s) do
               %i.fas.fa-comment-alt :コメントする
-          .container
-            = form_with(model: [@share, @sharecomment], local: true) do |form|
-              = form.text_area :text, placeholder: "コメントする", rows: "2"
-              = form.submit "SEND"
+          -# .container
+          -#   = form_with(model: [@share, @sharecomment], local: true) do |form|
+          -#     = form.text_area :text, placeholder: "コメントする", rows: "2"
+          -#     = form.submit "SEND"
 
             
