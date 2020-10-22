@@ -2,7 +2,19 @@
 .maincontent
   = render 'targets/leftcontent'
   .userright-content
-    今日の目標
-    -@target.each do |t|
-      =t.title
-      
+    .user-name
+      %i.fa.fa-user :
+      =@user.username
+      さんの詳細ページ
+    .user-target
+      .user-targettop
+        %i.fa.fa-check-square
+        今日の目標:
+      .user-tagettext
+        -@target.each do |t|
+          %ul
+          .user-targettext1
+            %li=t.title
+    .user-health
+      %i.fa.fa-check-square
+      今日の体調:
