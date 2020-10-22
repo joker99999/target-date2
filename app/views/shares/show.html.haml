@@ -5,10 +5,17 @@
     .share-showcontent
       共有内容：
       =@share.share
-    .share-comments
-      =form_with model: @sharecomment do |c|
-        %ul 
-          %li
-            =c.text_area :text, class: 'sharecommmet-box'
-          %li  
-            =c.submit '投稿する', class: 'sharecomment-sendbtn'
+    .share-comment
+      .share-comment-text
+        -@sharecomments.each do |s|
+          %ul
+            %li
+              コメント：
+              =s.text
+      .share-comment-send
+        =form_with model: [@share, @sharecomment] do |c|
+          %ul 
+            %li
+              =c.text_area :text, class: 'sharecommmet-box'
+            %li  
+              =c.submit '投稿する', class: 'sharecomment-sendbtn'
