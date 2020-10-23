@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   resources :shares do
     resources :sharecomments, only: [:create]
   end
-  resources :questions 
+  resources :questions do
+    resources :questioncomments, only: [:create]
+  end
   resources :healths
 end
 

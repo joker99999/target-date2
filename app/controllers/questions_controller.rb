@@ -19,6 +19,9 @@ class QuestionsController < ApplicationController
   def show
     @date = DateTime.now.strftime("%m月%d日")
     @users = User.all
+    @question = Question.find(params[:id])
+    @questioncomments = Questioncomment.all
+    @questioncomment = Questioncomment.new
   end
 
   private

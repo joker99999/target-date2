@@ -16,6 +16,6 @@ class SharecommentsController < ApplicationController
 
   private
   def sharecomment_params
-    params.require(:sharecomment).permit(:text)
+    params.require(:sharecomment).permit(:text, :share_id)
   end
 end

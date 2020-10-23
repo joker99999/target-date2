@@ -3,4 +3,19 @@
   = render 'targets/leftcontent'
   .question-show
     .question-show-content
-      kk
+      質問内容：
+      =@question.title
+    .question-comment
+      .question-comment-text
+        -@questioncomments.each do |q|
+          %ul
+            %li
+              コメント：
+              =q.text
+      .question-comment-send
+        =form_with model: [@question, @questioncomment] do |c|
+          %ul 
+            %li
+              =c.text_area :text, class: 'questioncommmet-box'
+            %li  
+              =c.submit '投稿する', class: 'questioncomment-sendbtn'
