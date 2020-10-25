@@ -10,4 +10,10 @@ class User < ApplicationRecord
   has_many :shares
   has_many :sharecomments 
 
+  def self.guest
+    find_or_create_by(email: "test@com") do |user|
+      user.password = Rails.application.secrets.test_account_pass
+    end
+  end
+
 end
