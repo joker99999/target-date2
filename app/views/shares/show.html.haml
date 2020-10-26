@@ -5,17 +5,31 @@
     .share-showcontent
       共有内容：
       =@share.share
-    .share-comment
-      .share-comment-text
-        -@sharecomments.each do |s|
-          %ul
-            %li
-              コメント：
-              =s.text
-      .share-comment-send
-        =form_with model: [@share, @sharecomment] do |c|
-          %ul 
-            %li
-              =c.text_area :text, class: 'sharecommmet-box'
-            %li  
-              =c.submit '投稿する', class: 'sharecomment-sendbtn'
+      .container
+        - if current_user
+          = form_with(model: [@share, @sharecomment], local: true) do |form|
+            = form.text_area :text, placeholder: "コメントする"
+            = form.submit "SEND"
+        - else
+          %strong
+            %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+      .comments
+        %h4 ＜コメント一覧＞
+        - @sharecomments.each do |comment|
+          = comment.text
+
+
+    -# .share-comment
+    -#   .share-comment-text
+    -#     -@sharecomments.each do |s|
+    -#       %ul
+    -#         %li
+    -#           コメント：
+    -#           =s.text
+      -# .share-comment-send
+      -#   =form_with model: [@share, @sharecomment] do |c|
+      -#     %ul 
+      -#       %li
+      -#         =c.text_area :text, class: 'sharecommmet-box'
+      -#       %li  
+      -#         =c.submit '投稿する', class: 'sharecomment-sendbtn'
