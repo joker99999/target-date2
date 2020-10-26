@@ -2,6 +2,7 @@ class SharecommentsController < ApplicationController
 
   def create
     Sharecomment.create(sharecomment_params)
+    redirect_back(fallback_location: root_path)
   end
 
   private
