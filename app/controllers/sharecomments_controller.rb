@@ -1,21 +1,27 @@
 class SharecommentsController < ApplicationController
 
-  # def new
-  #   @sharecomment = Sharecommnt.new
-  # end
-
   def create
-    @sharecomment = Sharecomment.new(sharecomment_params)
-    @sharecomment.user_id = current_user.id
-    if @sharecomment.save
-      redirect_back(fallback_location: root_path)
-    else
-      redirect_back(fallback_location: root_path)
-    end
+    Sharecomment.create(sharecomment_params)
   end
 
   private
   def sharecomment_params
-    params.require(:sharecomment).permit(:text, :share_id)
+    params.require(:sharecomment).permit(:text).merge(user_id: current_user.id, share_id: params[:share_id])
   end
+
+  # def create
+  #   @sharecomment = Sharecomment.new(sharecomment_params)
+  #   @sharecomment.user_id = current_user.id
+  #   if @sharecomment.save
+  #     redirect_back(fallback_location: root_path)
+  #   else
+  #     redirect_back(fallback_location: root_path)
+  #   end
+  # end
+  
+
+  # private
+  # def sharecomment_params
+  #   params.require(:sharecomment).permit(:text)
+  # end
 end

@@ -22,8 +22,10 @@ class SharesController < ApplicationController
     @date = DateTime.now.strftime("%m月%d日")
     @share = Share.find(params[:id])
     # @sharecomments = Sharecomment.find(params[:id])
-    @sharecomments = Sharecomment.all
+    # @sharecomments = Sharecomment.all
+    # @sharecomment = Sharecomment.new
     @sharecomment = Sharecomment.new
+    @sharecomments = @share.sharecomments.includes(:user)
   end
 
   private
