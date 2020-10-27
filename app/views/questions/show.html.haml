@@ -5,17 +5,18 @@
     .question-show-content
       質問内容：
       =@question.title
-    .question-comment
-      .question-comment-text
-        -@questioncomments.each do |q|
+      .question-container
+        - if current_user
+          = form_with(model: [@question, @questioncomment], local: true) do |form|
+            = form.text_area :text, placeholder: "コメントする"
+            = form.submit "投稿する"
+        - else
+          %strong
+            %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+      .question-comments
+        %h4 ＜コメント一覧＞
+        - @questioncomments.each do |comment|
           %ul
             %li
-              コメント：
-              =q.text
-      .question-comment-send
-        =form_with model: [@question, @questioncomment] do |c|
-          %ul 
-            %li
-              =c.text_area :text, class: 'questioncommmet-box'
-            %li  
-              =c.submit '投稿する', class: 'questioncomment-sendbtn'
+            = comment.user.username 
+            = comment.text

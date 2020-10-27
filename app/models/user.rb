@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :groups, through: :user_groups
   has_many :targets
   has_many :questions
+  has_many :queestioncomments 
   has_many :shares
   has_many :sharecomments 
 
@@ -15,6 +16,4 @@ class User < ApplicationRecord
       user.password = Rails.application.secrets.test_account_pass
     end
   end
-
-
 end

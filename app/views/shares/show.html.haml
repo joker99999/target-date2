@@ -5,7 +5,7 @@
     .share-showcontent
       共有内容：
       =@share.share
-      .container
+      .share-container
         - if current_user
           = form_with(model: [@share, @sharecomment], local: true) do |form|
             = form.text_area :text, placeholder: "コメントする"
@@ -13,7 +13,7 @@
         - else
           %strong
             %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
-      .comments
+      .share-comments
         %h4 ＜コメント一覧＞
         - @sharecomments.each do |comment|
           %ul
