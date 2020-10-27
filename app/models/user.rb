@@ -12,8 +12,10 @@ class User < ApplicationRecord
   has_many :sharecomments 
 
   def self.guest
-    find_or_create_by(email: "test@com") do |user|
-      user.password = Rails.application.secrets.test_account_pass
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.username = "guestuser"
+      # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end
   end
 end
