@@ -26,5 +26,6 @@
           = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード再入力"
         .signup-btn
           = f.submit "Sign up"
+          %p= link_to 'テストユーザーログイン', users_guest_sign_in_path, method: :post, class: "testuser"
 
 

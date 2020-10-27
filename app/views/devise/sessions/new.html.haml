@@ -5,16 +5,14 @@
     %span.fa-stack.fa-lg
       %i.fa.fa-circle.fa-stack-2x
       %i.fa.fa-lock.fa-stack-1x
-      -# = link_to 'ゲストログイン（閲覧用）', homes_guest_sign_in_path, method: :post
-      = link_to 'テストユーザーログイン', users_guest_sign_in_path, method: :post, class: "testuser"
-      .new
-        = link_to new_user_registration_path, class: "newregistration" do
-          アカウント新規作成はこちら
-          %i.fa.fa-hand-o-left
+      -# .new
+      -#   = link_to new_user_registration_path, class: "newregistration" do
+      -#     アカウント新規作成はこちら
+          -# %i.fa.fa-hand-o-left
   %input.login-username{:autofocus => "true", :placeholder => "Email", :required => "true", :type => "email"}/
   %input.login-password{:placeholder => "Password", :required => "true", :type => "password"}/
   %input.login-submit{:name => "Login", :type => "submit", :value => "Login"}/
 %a.login-forgot-pass{:href => "#"} forgot password?
 .underlay-photo
 .underlay-black
-
+%p= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post
