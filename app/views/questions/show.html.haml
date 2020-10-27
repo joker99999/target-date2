@@ -6,17 +6,21 @@
       質問内容：
       =@question.title
       .question-container
-        - if current_user
-          = form_with(model: [@question, @questioncomment], local: true) do |form|
-            = form.text_area :text, placeholder: "コメントする"
-            = form.submit "投稿する"
-        - else
-          %strong
-            %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+        = form_with(model: [@question, @questioncomment], local: true) do |f|
+          = f.text_area :text, placeholder: "コメントする"
+          = f.submit "投稿する"
       .question-comments
         %h4 ＜コメント一覧＞
-        - @questioncomments.each do |comment|
+        - @questioncomments.each do |c|
           %ul
             %li
-            = comment.user.username 
-            = comment.text
+            = c.user.username 
+            = c.text
+      -# .question-container
+      -#   - if current_user
+      -#     = form_with(model: [@question, @questioncomment], local: true) do |form|
+      -#       = form.text_area :text, placeholder: "コメントする"
+      -#       = form.submit "投稿する"
+      -#   - else
+      -#     %strong
+      -#       %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
