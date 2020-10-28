@@ -1,8 +1,13 @@
 class SharecommentsController < ApplicationController
 
   def create
-    Sharecomment.create(sharecomment_params)
-    redirect_back(fallback_location: root_path)
+    # Sharecomment.create(sharecomment_params)
+    # redirect_back(fallback_location: root_path)
+    @sharecomment = Sharecomment.create(sharecomment_params)
+    respond_to do |format|
+      format.html { redirect_to share_path(params[:share_id])  }
+      format.json
+    end
   end
 
   private

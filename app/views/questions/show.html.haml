@@ -6,9 +6,9 @@
       質問内容：
       =@question.title
       .question-container
-        = form_with(model: [@question, @questioncomment], local: true) do |f|
-          = f.text_area :text, placeholder: "コメントする"
-          = f.submit "投稿する"
+        = form_with(model: [@question, @questioncomment], local: true, id: "new_questioncomment") do |f|
+          = f.text_area :text, placeholder: "コメントする", class: "question-textbox"
+          = f.submit "投稿する", class: "quesstion-submit"
       .question-comments
         %h4 ＜コメント一覧＞
         - @questioncomments.each do |c|
