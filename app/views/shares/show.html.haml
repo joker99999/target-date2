@@ -11,11 +11,11 @@
           = f.submit "投稿する", class: "share-submit"
       .share-comments
         %h4 ＜コメント一覧＞
-        - @sharecomments.each do |c|
+        - @sharecomments.each do |comment|
           %ul
             %li
-            = c.user.username 
-            = c.text
+            = comment.user.username 
+            = comment.text
       -#  <%= form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form| %> 
       -#   <%= form.text_area :text, placeholder: "コメントする" , rows: "2", class: "textbox" %>
       -#   <%= form.submit "SEND", class: "form__submit" %>
