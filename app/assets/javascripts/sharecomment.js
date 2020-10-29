@@ -1,9 +1,7 @@
 $(function(){
   function buildHTML(sharecomment){
     let html = `<p>
-                  <strong>
-                    <a href=/users/${sharecomment.user_id}>${sharecomment.user_name}</a>：
-                  </strong>
+                  ${sharecomment.user_name}
                   ${sharecomment.text}
                 </p>`
     return html;
@@ -22,9 +20,9 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.comments').append(html);
+      $('.sharecomments').append(html);
       $('.share-textbox').val('');
       $('.share-submit').prop('disabled', false);
     })
   })
-})
+});
