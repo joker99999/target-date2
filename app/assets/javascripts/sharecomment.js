@@ -1,8 +1,10 @@
 $(function(){
-  function buildHTML(sharecomment){
+  function buildHTML(comment){
     let html = `<p>
-                  ${sharecomment.user_name}
-                  ${sharecomment.text}
+                  <strong>
+                    <a href=/users/${comment.user_id}>${comment.user_name}</a>：
+                  </strong>
+                  ${comment.text}
                 </p>`
     return html;
   }
