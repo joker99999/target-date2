@@ -1,7 +1,10 @@
 class QuestioncommentsController < ApplicationController
   def create
-    Questioncomment.create(questioncomment_params)
-    redirect_back(fallback_location: root_path)
+    @questioncomment = Questioncomment.create(questioncomment_params)
+    respond_to do |format|
+      format.html { redirect_to question_path(params[:question_id])  }
+      format.json
+    end
   end
 
   private
