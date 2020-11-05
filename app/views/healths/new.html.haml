@@ -8,32 +8,60 @@
       = link_to healths_path, class: "healthlink" do
         体調管理報告の一覧はこちら
         %i.fa.fa-hand-o-left
-    -# = @questions1.each do |q|
-    = form_with model: @health do |h|
-      .health-question
-        .question-text
-          1,朝ごはんは食べましたか？
-        .question1
-          =h.collection_select :question1_text, Question1.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
-      .health-question
-        .question-text
-          2,何時間睡眠しましたか?
-        .question2
-          =h.collection_select :question2_text, Question2.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
-      .health-question
-        .question-text
-          3,適度な運動はしていますか?
-        .question3
-          =h.collection_select :question3_text, Question1.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
-      .health-question
-        .question-text
-          4,体調はどうですか?
-        .question4
-          =h.collection_select :question4_text, Question3.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
-      .health-question
-        .question-text
-          5,本日のモチベーションはどうですか?
-        .question5
-          =h.collection_select :question5_text, Question4.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
-      .health-btn 
-        =h.submit '投稿する', class: 'health-sendbtn'
+      = form_with model: @health do |f|
+        .health-question
+          .question-text
+            1,朝ごはんは食べましたか？
+          .question1
+            =f.text_area :question1_text, class: "question-box"
+        .health-question
+          .question-text
+            2,何時間睡眠しましたか?
+          .question2
+            =f.text_area :question2_text, class: "question-box"
+        .health-question
+          .question-text
+            3,適度な運動はしていますか?
+          .question3
+            =f.text_area :question3_text, class: "question-box"
+        .health-question
+          .question-text
+            4,体調はどうですか?
+          .question4
+            =f.text_area :question4_text, class: "question-box"
+        .health-question
+          .question-text
+            5,本日のモチベーションはどうですか?
+          .question5
+            =f.text_area :question5_text, class: "question-box"
+        .health-btn 
+          =f.submit '投稿する', class: 'health-sendbtn'
+
+    -# = form_with model: @health do |h|
+    -#   .health-question
+    -#     .question-text
+    -#       1,朝ごはんは食べましたか？
+    -#     .question1
+    -#       =h.collection_select :question1_text, Question1.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
+    -#   .health-question
+    -#     .question-text
+    -#       2,何時間睡眠しましたか?
+    -#     .question2
+    -#       =h.collection_select :question2_text, Question2.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
+    -#   .health-question
+    -#     .question-text
+    -#       3,適度な運動はしていますか?
+    -#     .question3
+    -#       =h.collection_select :question3_text, Question1.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
+    -#   .health-question
+    -#     .question-text
+    -#       4,体調はどうですか?
+    -#     .question4
+    -#       =h.collection_select :question4_text, Question3.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
+    -#   .health-question
+    -#     .question-text
+    -#       5,本日のモチベーションはどうですか?
+    -#     .question5
+    -#       =h.collection_select :question5_text, Question4.all, :id, :anser, {prompt:"選択してください"}, {class: 'input-text'}
+    -#   .health-btn 
+    -#     =h.submit '投稿する', class: 'health-sendbtn'

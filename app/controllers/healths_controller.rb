@@ -14,6 +14,7 @@ class HealthsController < ApplicationController
     @healths = Health.all
     @date = DateTime.now.strftime("%m月%d日")
     @users = User.all
+    # @health = Health.find(params[:id])
   end
 
   private
