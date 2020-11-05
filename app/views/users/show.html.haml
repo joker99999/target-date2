@@ -18,3 +18,20 @@
     .user-health
       %i.fa.fa-check-square
       今日の体調:
+      -@health.each do |h|
+        .user-health
+        %br
+          1,朝ごはんは食べましたか？  :
+          =h.question1_text
+        %br   
+          2,何時間睡眠しましたか?  :
+          =h.question2_text 
+        %br   
+          3,適度な運動はしていますか?
+          =h.question3_text
+        %br   
+          4,体調はどうですか?
+          =h.question4_text 
+        %br   
+          5,本日のモチベーションはどうですか?
+          =h.question5_text 
