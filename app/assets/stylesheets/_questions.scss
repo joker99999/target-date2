@@ -10,12 +10,6 @@
       left: 60px;
       top: 30px;
     }
-    .sendbtn {
-      position: relative;
-      left: 260px;
-      top: 60px;
-      border-radius:5px;
-    }
   }
 .question-index {
   padding-left: 20px;
@@ -39,4 +33,14 @@
       }
     }
   }
+}
+.target-sendbtn  {
+  height: 50px;
+  width: 100px;
+  background-color: lightgray;
+  color: black;
+  position: relative;
+  top: 60px;
+  left: 500px;
+  border-radius:5px;
 }
