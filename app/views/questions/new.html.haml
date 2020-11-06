@@ -3,10 +3,10 @@
   = render 'targets/leftcontent'
   .question-new
     質問投稿ページ
-    .question-new-box
-      = form_with model: @question do |f|
-        %ul 
-          %li
-            =f.text_area :title, class: 'target-box'
-          %li  
-            =f.submit '投稿する', class: 'sendbtn'
+  .question-new-box
+    = form_with model: @question do |f|
+      %ul 
+        %li
+          =f.text_area :title, class: 'target-box'
+        %li  
+          =f.submit '投稿する', class: 'target-sendbtn'
