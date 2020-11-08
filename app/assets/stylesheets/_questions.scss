@@ -1,6 +1,8 @@
-.question-new {
+.question-box {
+  .question-new {
     text-align: center;
     font-size: 30px;
+    font-weight: 600;
   }
   .question-new-box {
     .target-box {
@@ -10,7 +12,18 @@
       left: 60px;
       top: 30px;
     }
+    .target-sendbtn  {
+      height: 50px;
+      width: 100px;
+      background-color: lightgray;
+      color: black;
+      position: relative;
+      top: 60px;
+      left: 500px;
+      border-radius:5px;
+    }
   }
+}
 .question-index {
   padding-left: 20px;
   padding-top: 10px;
@@ -33,14 +46,4 @@
       }
     }
   }
-}
-.target-sendbtn  {
-  height: 50px;
-  width: 100px;
-  background-color: lightgray;
-  color: black;
-  position: relative;
-  top: 60px;
-  left: 500px;
-  border-radius:5px;
 }
