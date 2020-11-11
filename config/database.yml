@@ -50,5 +50,7 @@ test:
 production:
   <<: *default
   database: target_date2_production
-  username: target_date2
-  password: <%= ENV['TARGET_DATE2_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['jun8724'] %>
+  socket: /var/lib/mysql/mysql.sock
+

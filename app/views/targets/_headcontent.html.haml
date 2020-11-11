@@ -25,9 +25,8 @@
       = link_to edit_user_registration_path, class: 'profilebtn' do
         %i.fa.fa-edit
         プロフィール変更
-      = link_to destroy_user_session_path, method: :delete, class: 'logoutbtn' do
-        %i.fa.fa-sign-out
-        ログアウト
+      -# = link_to destroy_user_session_path, method: :delete, class: 'logoutbtn' do
+      = button_to 'ログアウト', destroy_user_session_path, method: :get, class: 'logoutbtn'
     - else
       = link_to '・サインアップ', new_user_registration_path, class: 'signupbtn'
       = link_to '・ログイン', new_user_session_path, class: 'loginbtn'

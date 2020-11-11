@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :groups, through: :user_groups
   has_many :targets
   has_many :questions
   has_many :queestioncomments 
@@ -12,10 +11,9 @@ class User < ApplicationRecord
   has_many :sharecomments 
 
   def self.guest
-    find_or_create_by!(email: 'guest@example.com') do |user|
-      user.password = SecureRandom.urlsafe_base64
+    find_or_create_by(email: "test@com") do |user|
+      user.password = Rails.application.secrets.test_account_pass
       user.username = "guestuser"
-      # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end
   end
 end
