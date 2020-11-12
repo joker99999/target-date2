@@ -9,3 +9,17 @@
 @import "shares";
 @import "questions";
 @import "healths";
+
+.notifications {
+  color: #ffffff;
+  text-align: center;  
+
+  .notice {
+    background-color: lightBlue;
+    height: 30px;
+  }
+
+  .alert {
+    background-color: alert_orange;
+  }
+}

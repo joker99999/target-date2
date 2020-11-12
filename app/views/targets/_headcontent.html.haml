@@ -22,11 +22,11 @@
         体調管理報告
   .topuser
     - if user_signed_in?
-      = link_to edit_user_registration_path, class: 'profilebtn' do
-        %i.fa.fa-edit
-        プロフィール変更
-      -# = link_to destroy_user_session_path, method: :delete, class: 'logoutbtn' do
-      = button_to 'ログアウト', destroy_user_session_path, method: :get, class: 'logoutbtn'
+      %ul
+        %li
+        = link_to 'プロフィール変更', edit_user_registration_path, class: 'profilebtn' 
+        %li
+        = link_to 'ログアウト', destroy_user_session_path, method: :get, class: 'logoutbtn', data: { confirm: 'ログアウトしますか？' }
     - else
       = link_to '・サインアップ', new_user_registration_path, class: 'signupbtn'
       = link_to '・ログイン', new_user_session_path, class: 'loginbtn'
