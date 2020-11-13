@@ -6,7 +6,7 @@ class TargetsController < ApplicationController
   end
 
   def create
-    Target.create!(target_params)
+    Target.create(target_params)
     redirect_to targets_path
   end
 

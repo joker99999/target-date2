@@ -47,3 +47,26 @@
     }
   }
 }
+
+.question-show {
+  padding-left: 30px;
+  .question-show-content {
+    font-size: 25px;
+    padding-top: 15px;
+    .question-container {
+      padding-top: 20px;
+      .question-submit {
+        background-color: lightblue;
+        border-radius:5px;
+        margin-left: 20px;
+        position: relative;
+        top: -25px;
+      }
+    }
+    .questioncomments {
+      padding: 5px;
+      padding-top: 20px;
+    }
+  }
+}
+
