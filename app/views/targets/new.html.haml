@@ -9,7 +9,7 @@
       目標投稿一覧はこちら
       %i.fa.fa-hand-o-left
     .rightcontent-text
-      = form_with model: @target do |f|
+      = form_with model: @target, local: true do |f|
         %ul 
           %li
             =f.text_area :title, class: 'target-box'

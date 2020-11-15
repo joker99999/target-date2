@@ -18,18 +18,3 @@
                 = link_to comment.user.username, "/users/#{comment.user_id}"
                 ：
               = comment.text
-      -# .question-comments
-      -#   %h4 ＜コメント一覧＞
-      -#   - @questioncomments.each do |c|
-      -#     %ul
-      -#       %li
-      -#       = c.user.username 
-      -#       = c.text
-      -# .question-container
-      -#   - if current_user
-      -#     = form_with(model: [@question, @questioncomment], local: true) do |form|
-      -#       = form.text_area :text, placeholder: "コメントする"
-      -#       = form.submit "投稿する"
-      -#   - else
-      -#     %strong
-      -#       %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※

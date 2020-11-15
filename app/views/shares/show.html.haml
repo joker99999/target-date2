@@ -19,26 +19,3 @@
                 ：
               = comment.text
 
-
-      -# .share-comments
-      -#   %h4 ＜コメント一覧＞
-      -#   - @sharecomments.each do |comment|
-      -#     %ul
-      -#       %li
-      -#       = comment.user.username 
-      -#       = comment.text
-
-    -# .share-comment
-    -#   .share-comment-text
-    -#     -@sharecomments.each do |s|
-    -#       %ul
-    -#         %li
-    -#           コメント：
-    -#           =s.text
-      -# .share-comment-send
-      -#   =form_with model: [@share, @sharecomment] do |c|
-      -#     %ul 
-      -#       %li
-      -#         =c.text_area :text, class: 'sharecommmet-box'
-      -#       %li  
-      -#         =c.submit '投稿する', class: 'sharecomment-sendbtn'

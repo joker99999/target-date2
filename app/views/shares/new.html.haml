@@ -5,7 +5,7 @@
     .box-top
       ー新規共有ページー
     .box-text
-      = form_with model: @share do |f|
+      = form_with model: @share, local: true do |f|
         %ul 
           %li
             =f.text_area :share, class: 'target-box'

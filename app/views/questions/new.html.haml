@@ -5,7 +5,7 @@
     .question-new
       ー質問投稿ページー
     .question-new-box
-      = form_with model: @question do |f|
+      = form_with model: @question, local: true do |f|
         %ul 
           %li
             =f.text_area :title, class: 'target-box'
