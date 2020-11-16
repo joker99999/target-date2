@@ -8,7 +8,7 @@
       = link_to healths_path, class: "healthlink" do
         体調管理報告の一覧はこちら
         %i.fa.fa-hand-o-left
-      = form_with model: @health do |f|
+      = form_with model: @health, local: true do |f|
         .health-question
           .question-text
             1,朝ごはんは食べましたか？

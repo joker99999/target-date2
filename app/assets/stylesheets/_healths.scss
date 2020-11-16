@@ -74,3 +74,9 @@
   width: 600px;
   height: 250px;
 }
+.health-index {
+  .healthbox1 {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+  }
+}
