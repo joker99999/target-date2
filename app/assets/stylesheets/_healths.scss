@@ -76,7 +76,6 @@
 }
 .health-index {
   .healthbox1 {
-    overflow: auto;
-    scroll-snap-type: y mandatory;
+    overflow: scroll;
   }
 }
