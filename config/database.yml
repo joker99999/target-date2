@@ -51,6 +51,6 @@ production:
   <<: *default
   database: target_date2_production
   username: root
-  password: <%= ENV['jun8724'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
 
