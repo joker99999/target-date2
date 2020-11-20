@@ -27,5 +27,8 @@
         .signup-btn
           = f.submit "Sign up"
           -# %p= link_to 'テストユーザーログイン', users_guest_sign_in_path, method: :post, class: "testuser"
-
+  .login
+    =link_to new_user_session_path, class: 'login1' do
+      ログインはこちら
+      %i.fa.fa-hand-o-left
 

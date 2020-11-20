@@ -15,4 +15,10 @@
 %a.login-forgot-pass{:href => "#"} forgot password?
 .underlay-photo
 .underlay-black
-= link_to 'Log in for TEST', users_guest_sign_in_path, method: :post
+.link
+  =link_to users_guest_sign_in_path, method: :post, class: 'logintest' do
+    テストログインはこちら
+    %i.fa.fa-hand-o-left
+  =link_to new_user_registration_path, class: 'signuplink' do
+    新規登録はこちらから
+    %i.fa.fa-hand-o-left
