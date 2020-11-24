@@ -60,3 +60,9 @@
 #     # password: "please use keys"
 #   }
 server '54.249.232.134', user: 'ec2-user', roles: %w{app db web}
+# set :ssh_options, {
+#   port: app_path
+#   keys: [File.expand_path('~/.ssh/targe-t-date.pem')]
+#   forward_agent: true,
+#   auth_methods: %w(publickey)
+# }
