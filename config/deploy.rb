@@ -3,7 +3,7 @@
 lock '3.14.1'
 
 # Capistranoのログの表示に利用する
-set :application, 'taeget-date2'
+set :application, 'target-date2'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:joker99999/target-date2.git'
